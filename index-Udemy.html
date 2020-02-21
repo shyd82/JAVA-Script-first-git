@@ -5,16 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Javascript Sandbox: Section 2</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+
+        }
+
+        #di-pic{
+            width:700px;
+            margin:90px auto;
+            padding:10px;
+            background-color: yellowgreen;
+            /* 设置文本居中 */
+            text-align: center;
+
+        }
+
+        
+    </style>
 </head>
+
 <body>
     <h1>
         Javascript Sandbox: Section 2
     </h1>
 
-    <button id = "btn">我是一个按钮 ~~~~~
-    </button>
+    <div id = 'di-pic'>
+        <p id = info></p>
 
+        <img src = "image/3.jpg" alt = "ice bar" />
     
-    <script src="DOM.js"></script>
+
+        <button id = "prev">上一张</button>
+        <button id = "next">下一张</button>
+
+    </div>
+    <script src="dom-exercise-pic.js"></script>
 </body>
 </html>
