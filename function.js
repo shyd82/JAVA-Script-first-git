@@ -101,12 +101,139 @@
 // man(obj);
 
 
-function fun(){
-    alert('函数要执行啦！！！');
-    for(i=0;i<=5;i++){
-        console.log(i);
+
+
+// 函数套函数
+// function fun(){
+//     alert('函数要执行啦！！！');
+//     for(i=0;i<=5;i++){
+//         console.log(i);
+//     }
+//     alert('函数执行完毕了！~~~')
+// }
+
+// fun();
+
+
+
+
+
+
+// // return和coutinue的使用
+// function fun(){
+//     alert('函数要执行啦！！！');
+//     for(i=0;i<=5;i++){
+        
+//         if(i == 3){
+
+//             // break;
+//             // continue;
+//             return;
+            
+//         }
+
+//         console.log(i);
+
+//     }
+
+//     alert('函数执行完毕了！~~~')
+// }
+
+// fun();
+
+
+// return可以是任意类型值：
+
+// function fun2(){
+//     return 10;
+// }
+
+// var a = fun2();
+// console.log(a);
+
+
+// function fun3(){
+//     return {name:'Wendy'};
+// }
+
+// var a = fun3();
+// console.log(a);
+// console.log(a.name);
+
+
+
+
+// // 函数套函数，函数套函数！！！
+// function fun4(){
+//     function fun5(){
+//         alert('hahaha!');
+//     }
+//   fun5();
+//     //着重记得要调用一遍套在里面的函数，例如这里的fun5() 
+// }
+
+// fun4();
+
+
+
+
+
+
+
+// 调函数fun(),调对象：XXX.name
+
+// 比如：console.log,调console的log对象；document.write,调document的write对象。
+
+// Object里面套函数：
+
+var objc1 = {
+    name:'Zhang San',
+    age:'18',
+    sayname:function(){
+        console.log(objc1.name);
     }
-    alert('函数执行完毕了！~~~')
+};
+
+objc1.sayname();
+console.log(objc1.age);
+
+
+// 查看对象重点属性，比如查看document里面的除了已知write的其它属性
+// 使用for...in语句，语法是：
+// for(var 变量 in 对象){}
+
+for(var n in objc1){
+    console.log('hello');
+}
+// 结果是3次hello说明objc1里面有3个属性
+
+// 以下表达的意思是：每执行for in循环一次，那么就会把对象中的一个属性名字赋值给变量n：
+
+// for(var n in objc1){
+//     console.log(n);
+// }
+
+// for(var i in document){
+//     console.log('ok');
+// }
+
+
+
+
+// 取值，取对象中的属性值：
+for(var n in objc1){
+    console.log(objc1[n]);
 }
 
-fun();
+
+
+
+var a = 123;
+function fun(a){
+    alert(a);
+    a = 456
+}
+
+fun(a);
+alert(a);
+

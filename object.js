@@ -22,3 +22,26 @@ console.log(typeof objc);
 console.log(objc.name);
 
 document.write(objc.zip);
+
+
+
+
+// 第二种创建对象object的方式：
+// 直接用变量来创建：
+var obj = {
+    name:'Messi',
+    age: 32,
+    email:'Messi@hotmail.com',
+    job:'web develop'
+}
+
+// console.log(obj);
+console.log(obj.name)
+
+
+for(var t in obj){
+    console.log(t);
+}
+
+obj.job = 'soccer player';
+console.log(obj.job);
